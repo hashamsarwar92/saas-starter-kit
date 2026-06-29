@@ -1,11 +1,11 @@
-
+import "server-only";
 import { Webhook } from "svix";
 import { headers } from "next/headers";
 import { WebhookEvent } from "@clerk/nextjs/server";
-import useDatabase from "@/lib/database/useDatabase";
+import DatabaseActions from "@/lib/database/DatabaseActions";
 
 export default async function ClerkWebhook(request: Request) {
-    const db = useDatabase();
+    const db = DatabaseActions();
     const secret = process.env.CLERK_WEBHOOK_SIGNING_SECRET;
     if (!secret) {
         console.error("CLERK_WEBHOOK_SIGNING_SECRET is not set in environment variables.");
