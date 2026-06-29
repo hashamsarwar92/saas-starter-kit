@@ -1,5 +1,4 @@
-"use client";
-
+import "server-only";
 import { useState } from "react";
 
 import { DatabaseInterface } from "@/lib/database/DatabaseInterface";

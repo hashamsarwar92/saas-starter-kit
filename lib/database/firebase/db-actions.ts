@@ -1,4 +1,4 @@
-
+import "server-only";
 import { db } from "@/lib/database/firebase/firebase-admin";
 import { User } from "@/lib/database/models/User";
 import { collections } from "@/lib/database/firebase/collections";
