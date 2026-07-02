@@ -27,7 +27,11 @@ export const repository = (): Repository => {
     createSartillumUser: sartillumUserActions.createUser,
     getSartillumUserById: sartillumUserActions.getUserById,
     updateSartillumUser: sartillumUserActions.updateUser,
-    deleteSartillumUser: sartillumUserActions.deleteUser,
+    deleteSartillumUser: (id: string) => {
+      // Uncomment the following line if you want to enable deletion
+      // return sartillumUserActions.deleteUser(id);
+      throw new Error("Delete operation is not implemented yet.");
+    },
   };
 
   return repo;

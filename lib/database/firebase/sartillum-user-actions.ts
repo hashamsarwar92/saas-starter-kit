@@ -56,10 +56,10 @@ export const SartillumUserActions = () => {
             });
         },
 
-        async deleteUser(id: string) {
-            const ref = usersRef.doc(id);
-            await ref.delete();
-        },
+        // async deleteUser(id: string) {
+        //     const ref = usersRef.doc(id);
+        //     await ref.delete();
+        // },
 
 
     }
