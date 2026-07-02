@@ -1,4 +1,4 @@
-"use server";
+
 import { db } from "@/lib/database/firebase/firebase-admin";
 import { User } from "@/lib/database/models/User";
 import { getSartillumUserRef } from "./collections";
@@ -56,10 +56,10 @@ export const SartillumUserActions = () => {
             });
         },
 
-        // async deleteUser(id: string) {
-        //     const ref = usersRef.doc(id);
-        //     await ref.delete();
-        // },
+        async deleteUser(id: string) {
+            const ref = usersRef.doc(id);
+            await ref.delete();
+        },
 
 
     }
